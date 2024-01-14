@@ -24,7 +24,7 @@ while not end_of_game:
     else:
         if letter not in word:
             lives -= 1
-            print("Wrong !\tYou got", lives, "attempts left")
+            print("BAD GUESS!\tYou got", lives, "attempts left")
         else:
             for position in range(0,len(word)):
                 character = word[position]

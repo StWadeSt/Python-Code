@@ -3,12 +3,15 @@
 import random
 
 file = open("words.txt", "r")
-values = file.read()
-list_of_words=values.split("\n")
 
+if file.readable():
+    values = file.read()
+else:
+    print("File not readable")
+
+list_of_words=values.split("\n")
 lives = 6
 
-#list_of_words=['generic', 'gigabit', 'morning', 'beekeeper','housing']
 word = random.choice(list_of_words)
 display = ["_"] * len(word)
 used_letters=[]
@@ -39,4 +42,3 @@ while not end_of_game:
         elif lives == 0:
             end_of_game = True
             print("Game Over!")
- 
